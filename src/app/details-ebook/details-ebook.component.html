@@ -1,0 +1,14 @@
+<div *ngIf="livro">
+  <h2>{{ livro.titulo }}</h2>
+  <p><strong>Autor:</strong> {{ livro.autor }}</p>
+  <p><strong>Descrição:</strong> {{ livro.descricao }}</p>
+  <img [src]="livro.capa" alt="{{ livro.titulo }}" style="width: 300px;">
+  <div>
+    <button class="btn btn-danger" (click)="deletarLivro()">DELETAR</button>
+  </div>
+</div>
+
+<!-- Caso não tenha encontrado o livro -->
+<div *ngIf="!livro">
+  <p>Livro não encontrado.</p>
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="livros.length > 0">
+  <h2>Lista de E-books</h2>
+  <div class="card-deck" style="display: flex;">
+    <div *ngFor="let livro of livros" class="card" style="width: 18rem; padding: 2rem">
+      <img src="{{ livro.capa }}" class="card-img-top" alt="{{ livro.titulo }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ livro.titulo }}</h5>
+        <p class="card-text">{{ livro.autor }}</p>
+        <button class="btn btn-primary" > <a href="livros/{{livro.id}}"> Saiba Mais</a> </button>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="livros.length === 0">
+  <p>Não há livros disponíveis.</p>
+</div>
