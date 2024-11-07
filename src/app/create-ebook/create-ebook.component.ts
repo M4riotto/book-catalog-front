@@ -23,6 +23,8 @@ export class CreateEbookComponent {
       titulo: [''],
       autor: [''],
       descricao: [''],
+      anoPublicacao: [''],
+      imageURL: [''],
     });
   }
 

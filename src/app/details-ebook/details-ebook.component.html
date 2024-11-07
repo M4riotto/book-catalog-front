@@ -2,7 +2,8 @@
   <h2 class="livro-titulo">{{ livro.titulo }}</h2>
   <p class="livro-autor"><strong>Autor:</strong> {{ livro.autor }}</p>
   <p class="livro-descricao"><strong>Descrição:</strong> {{ livro.descricao }}</p>
-  <img [src]="livro.capa" alt="{{ livro.titulo }}" class="livro-imagem">
+  <img [src]="livro.imageURL" alt="{{ livro.titulo }}" class="livro-imagem">
+  <p class="livro-descricao"><strong>Ano de Publicação:</strong> {{ livro.anoPublicacao }}</p>
   <div class="livro-botoes">
     <button class="btn btn-danger" (click)="deletarLivro()">DELETAR</button>
     <button class="btn btn-warning" (click)="editarLivro()">Editar</button>

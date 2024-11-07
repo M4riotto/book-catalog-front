@@ -3,7 +3,7 @@
   <button class="criar-livro-btn"><a href="criar-livro">Crie seu livro</a></button>
   <div class="cards-container">
     <div *ngFor="let livro of livros" class="livro-card">
-      <img src="{{ livro.capa }}" class="livro-imagem" alt="{{ livro.titulo }}">
+      <img src="{{ livro.imageURL }}" class="livro-imagem" alt="{{ livro.titulo }}">
       <div class="livro-infos">
         <h5 class="livro-titulo">{{ livro.titulo }}</h5>
         <p class="livro-autor">{{ livro.autor }}</p>

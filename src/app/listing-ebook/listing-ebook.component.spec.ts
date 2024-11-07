@@ -14,7 +14,6 @@ export class ListingEbookComponent implements OnInit {
   ngOnInit(): void {
     this.ebookService.getLivros().subscribe(
       (data) => {
-        console.log('Teste som 1 2 ' + data);
         this.livros = data;
       },
       (error) => {

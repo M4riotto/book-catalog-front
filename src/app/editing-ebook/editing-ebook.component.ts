@@ -24,6 +24,8 @@ export class EditingEbookComponent implements OnInit {
       titulo: [''],
       autor: [''],
       descricao: [''],
+      anoPublicacao: [''],
+      imageURL: [''],
     });
   }
 
