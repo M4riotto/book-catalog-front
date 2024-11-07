@@ -1,27 +1,69 @@
-# BookCatalogFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+# **Catálogo de Livros - Full Stack**
 
-## Development server
+Este projeto consiste em uma aplicação de catálogo de livros construída com o frontend em **Angular** e o backend em **Nest.js**, que utiliza JWT para autenticação e MySQL para persistência dos dados.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## **Estrutura do Projeto**
 
-## Code scaffolding
+- **Frontend**: Construído com Angular, fornece uma interface para visualizar, adicionar, editar e excluir livros. As rotas são protegidas por JWT.
+- **Backend**: Construído com Nest.js, oferece uma API RESTful para realizar operações CRUD nos livros. A autenticação também é protegida por JWT.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## **Parte 1: Frontend com Angular**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### **Pré-requisitos**
 
-## Running unit tests
+1. Node.js v18.2 ou superior
+2. Angular CLI 18.2
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### **Instalação**
 
-## Running end-to-end tests
+1. Clone o repositório do frontend:
+   ```bash
+   git clone <URL_DO_REPOSITORIO_FRONTEND>
+   cd book-catalog-front
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Further help
+### **Configuração**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Configuração do Ambiente**: Crie um arquivo `.env` na raiz do projeto para armazenar as variáveis de ambiente, como a URL da API:
+   ```bash
+   API_URL=http://localhost:3000
+   ```
+
+### **Scripts**
+
+- **Desenvolvimento**: Para iniciar o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
+
+- **Compilar**: Para compilar o projeto:
+   ```bash
+   ng build
+   ```
+
+### **Funcionalidades**
+
+- **Listagem de Livros**: A página inicial exibe todos os livros.
+- **Detalhes do Livro**: Página de detalhes para exibir informações específicas de um livro.
+- **Adição de Livros**: Formulário para adicionar novos livros.
+- **Edição de Livros**: Funcionalidade para editar os detalhes dos livros.
+- **Autenticação JWT**: As rotas que manipulam livros são protegidas por autenticação JWT.
+
+### **Rotas**
+
+- **/livros**: Exibe todos os livros no catálogo.
+- **/livros/:id**: Exibe os detalhes de um livro específico.
+- **/livros/adicionar**: Página para adicionar um novo livro.
+- **/livros/editar/:id**: Página para editar um livro existente.
+
+### **Autenticação**
+
+A autenticação utiliza **JWT**. Para autenticar, um usuário precisa fornecer um token válido que será armazenado no localStorage para acessar as rotas protegidas.
