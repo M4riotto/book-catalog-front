@@ -49,4 +49,8 @@ export class DetailsEbookComponent implements OnInit {
       this.router.navigate([`editar/livros/${this.livro.id}`]);
     }
   }
+
+  cancelar(): void {
+    this.router.navigate(['/']);
+  }
 }

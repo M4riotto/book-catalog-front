@@ -1,128 +1,155 @@
 /* Geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container de Livros */
-  .livros-container {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  /* Título */
-  .titulo {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .criar-livro-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container de Livros */
+.livros-container {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 20px;
+}
+
+/* Título */
+.titulo {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Campo de busca */
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Botão Criar Livro */
+.criar-livro-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Botão Criar Livro */
+.criar-livro-btn a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.criar-livro-btn a:hover {
+  background-color: #0056b3;
+}
+
+/* Container de Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card de Livro */
+.livro-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 18rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.livro-imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.livro-infos {
+  padding-top: 1rem;
+}
+
+.livro-titulo {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.livro-autor {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botão Saiba Mais */
+.saiba-mais-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.saiba-mais-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.saiba-mais-btn:hover {
+  background-color: #218838;
+}
+
+/* Caso Não Haja Livros */
+.sem-livros p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 3rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Botão Criar Livro */
-  .criar-livro-btn a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    background-color: #007bff;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .criar-livro-btn a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Container de Cards */
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  /* Card de Livro */
   .livro-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 18rem;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .livro-imagem {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-  
-  .livro-infos {
-    padding-top: 1rem;
-  }
-  
-  .livro-titulo {
-    font-size: 1.25rem;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .livro-autor {
-    color: #555;
-    font-size: 1rem;
+    max-width: 18rem;
     margin-bottom: 1rem;
   }
-  
-  /* Botão Saiba Mais */
-  .saiba-mais-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
+
+  .search-container input {
+    width: 90%;
   }
-  
-  .saiba-mais-btn a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .saiba-mais-btn:hover {
-    background-color: #218838;
-  }
-  
-  /* Caso Não Haja Livros */
-  .sem-livros p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #888;
-    margin-top: 3rem;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .cards-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .livro-card {
-      width: 100%;
-      max-width: 18rem;
-      margin-bottom: 1rem;
-    }
-  }
-  
+}
