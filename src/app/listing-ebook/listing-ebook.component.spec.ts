@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EbookService } from './ebook.service'; // Importe o EbookService
+import { EbookService } from '../ebook.service'; // Importe o EbookService
 
 @Component({
   selector: 'app-listing-ebook',
@@ -14,7 +14,7 @@ export class ListingEbookComponent implements OnInit {
   ngOnInit(): void {
     this.ebookService.getLivros().subscribe(
       (data) => {
-        console.log("Teste som 1 2 " + data); 
+        console.log('Teste som 1 2 ' + data);
         this.livros = data;
       },
       (error) => {
@@ -22,5 +22,4 @@ export class ListingEbookComponent implements OnInit {
       }
     );
   }
-  
 }

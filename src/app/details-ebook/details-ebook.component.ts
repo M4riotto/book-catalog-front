@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EbookDetailsService } from './ebook-details.service';
+import { EbookService } from '../ebook.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details-ebook',
-  standalone: true,  // Componente standalone
-  imports: [CommonModule ], // Adiciona CommonModule e RouterModule
+  standalone: true, // Componente standalone
+  imports: [CommonModule], // Adiciona CommonModule e RouterModule
   templateUrl: './details-ebook.component.html',
-  styleUrls: ['./details-ebook.component.css']
+  styleUrls: ['./details-ebook.component.css'],
 })
 export class DetailsEbookComponent implements OnInit {
   livro: any;
@@ -16,7 +16,7 @@ export class DetailsEbookComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router, // Adiciona o Router para redirecionar
-    private ebookDetailsService: EbookDetailsService
+    private ebookDetailsService: EbookService
   ) {}
 
   ngOnInit(): void {
@@ -44,4 +44,9 @@ export class DetailsEbookComponent implements OnInit {
     }
   }
 
+  editarLivro(): void {
+    if (this.livro && this.livro.id) {
+      this.router.navigate([`editar/livros/${this.livro.id}`]);
+    }
+  }
 }

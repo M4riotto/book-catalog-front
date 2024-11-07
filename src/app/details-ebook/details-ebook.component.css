@@ -1,0 +1,98 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container de Detalhes do Livro */
+  .livro-detalhes-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .livro-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .livro-autor, .livro-descricao {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .livro-imagem {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .livro-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Botões */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Caso não tenha encontrado o livro */
+  .livro-nao-encontrado p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 3rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .livro-detalhes-container {
+      padding: 1.5rem;
+    }
+  
+    .livro-imagem {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

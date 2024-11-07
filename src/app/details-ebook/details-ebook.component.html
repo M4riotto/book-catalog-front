@@ -1,14 +1,15 @@
-<div *ngIf="livro">
-  <h2>{{ livro.titulo }}</h2>
-  <p><strong>Autor:</strong> {{ livro.autor }}</p>
-  <p><strong>Descrição:</strong> {{ livro.descricao }}</p>
-  <img [src]="livro.capa" alt="{{ livro.titulo }}" style="width: 300px;">
-  <div>
+<div *ngIf="livro" class="livro-detalhes-container">
+  <h2 class="livro-titulo">{{ livro.titulo }}</h2>
+  <p class="livro-autor"><strong>Autor:</strong> {{ livro.autor }}</p>
+  <p class="livro-descricao"><strong>Descrição:</strong> {{ livro.descricao }}</p>
+  <img [src]="livro.capa" alt="{{ livro.titulo }}" class="livro-imagem">
+  <div class="livro-botoes">
     <button class="btn btn-danger" (click)="deletarLivro()">DELETAR</button>
+    <button class="btn btn-warning" (click)="editarLivro()">Editar</button>
   </div>
 </div>
 
 <!-- Caso não tenha encontrado o livro -->
-<div *ngIf="!livro">
+<div *ngIf="!livro" class="livro-nao-encontrado">
   <p>Livro não encontrado.</p>
 </div>

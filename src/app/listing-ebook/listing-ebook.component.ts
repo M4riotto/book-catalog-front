@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { EbookService } from './ebook.service'; // Importe o EbookService
+import { EbookService } from '../ebook.service'; // Importe o EbookService
 import { CommonModule } from '@angular/common'; // Importe o CommonModule para *ngIf e *ngFor
 import { RouterModule } from '@angular/router'; // Importa o RouterModule para usar [routerLink]
 
 @Component({
   selector: 'app-listing-ebook',
-  standalone: true,  // Componente standalone
+  standalone: true, // Componente standalone
   imports: [CommonModule, RouterModule], // Adiciona CommonModule e RouterModule
   templateUrl: './listing-ebook.component.html',
   styleUrls: ['./listing-ebook.component.css'],
