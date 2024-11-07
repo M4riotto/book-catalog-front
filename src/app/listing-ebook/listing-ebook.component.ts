@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EbookService } from '../ebook.service'; // Importe o EbookService
 import { CommonModule } from '@angular/common'; // Importe o CommonModule para *ngIf e *ngFor
-import { RouterModule } from '@angular/router'; // Importa o RouterModule para usar [routerLink]
+import { RouterModule, Router } from '@angular/router'; // Importa o RouterModule para usar [routerLink]
 import { FormsModule } from '@angular/forms'; // Importe FormsModule para usar ngModel
 
 @Component({
@@ -16,7 +16,8 @@ export class ListingEbookComponent implements OnInit {
   filteredLivros: any[] = []; // Array para armazenar os livros filtrados
   searchQuery: string = ''; // Valor do campo de busca
 
-  constructor(private ebookService: EbookService) {} // Injeta o EbookService
+  constructor(private ebookService: EbookService ,
+    private router: Router,) {} // Injeta o EbookService
 
   ngOnInit(): void {
     // Chama o método getLivros ao iniciar o componente
@@ -41,5 +42,11 @@ export class ListingEbookComponent implements OnInit {
     } else {
       this.filteredLivros = this.livros; // Se não houver consulta, exibe todos os livros
     }
+  }
+
+  logout(): void {
+    localStorage.removeItem('access_token');
+    this.router.navigate(['/auth']);
+    
   }
 }

@@ -3,6 +3,7 @@
 <div *ngIf="livros.length > 0" class="livros-container">
   <h2 class="titulo">Lista de E-books</h2>
   <button class="criar-livro-btn"><a href="criar-livro">Crie seu livro</a></button>
+  <button class="criar-livro-btn" (click)="logout()"> SAIR </button>
   <div class="search-container">
     <input 
       type="text" 
