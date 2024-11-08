@@ -41,7 +41,7 @@ Este projeto consiste em uma aplicação de catálogo de livros construída com 
 
 - **Desenvolvimento**: Para iniciar o servidor de desenvolvimento:
    ```bash
-   ng serve
+   ng serve -o
    ```
 
 - **Compilar**: Para compilar o projeto:
