@@ -21,7 +21,7 @@ Este projeto consiste em uma aplicação de catálogo de livros construída com 
 
 1. Clone o repositório do frontend:
    ```bash
-   git clone <URL_DO_REPOSITORIO_FRONTEND>
+   git clone https://github.com/M4riotto/book-catalog-front.git
    cd book-catalog-front
    ```
 
