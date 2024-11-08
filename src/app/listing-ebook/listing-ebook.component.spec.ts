@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EbookService } from '../ebook.service'; // Importe o EbookService
+import { EbookService } from '../ebook.service'; 
 
 @Component({
   selector: 'app-listing-ebook',
@@ -7,9 +7,9 @@ import { EbookService } from '../ebook.service'; // Importe o EbookService
   styleUrls: ['./listing-ebook.component.css'],
 })
 export class ListingEbookComponent implements OnInit {
-  livros: any[] = []; // Array para armazenar os livros
+  livros: any[] = []; 
 
-  constructor(private ebookService: EbookService) {} // Injeta o serviço
+  constructor(private ebookService: EbookService) {} 
 
   ngOnInit(): void {
     this.ebookService.getLivros().subscribe(

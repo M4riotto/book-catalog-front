@@ -1,30 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { EbookService } from '../ebook.service'; // Importe o EbookService
-import { CommonModule } from '@angular/common'; // Importe o CommonModule para *ngIf e *ngFor
-import { RouterModule, Router } from '@angular/router'; // Importa o RouterModule para usar [routerLink]
-import { FormsModule } from '@angular/forms'; // Importe FormsModule para usar ngModel
+import { EbookService } from '../ebook.service'; 
+import { CommonModule } from '@angular/common'; 
+import { RouterModule, Router } from '@angular/router'; 
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-listing-ebook',
-  standalone: true, // Componente standalone
-  imports: [CommonModule, RouterModule, FormsModule], // Adiciona FormsModule aqui
+  standalone: true, 
+  imports: [CommonModule, RouterModule, FormsModule], 
   templateUrl: './listing-ebook.component.html',
   styleUrls: ['./listing-ebook.component.css'],
 })
 export class ListingEbookComponent implements OnInit {
-  livros: any[] = []; // Array para armazenar os livros
-  filteredLivros: any[] = []; // Array para armazenar os livros filtrados
-  searchQuery: string = ''; // Valor do campo de busca
+  livros: any[] = []; 
+  filteredLivros: any[] = []; 
+  searchQuery: string = ''; 
 
   constructor(private ebookService: EbookService ,
-    private router: Router,) {} // Injeta o EbookService
+    private router: Router,) {} 
 
   ngOnInit(): void {
-    // Chama o método getLivros ao iniciar o componente
+    
     this.ebookService.getLivros().subscribe(
       (data) => {
-        this.livros = data; // Armazena os livros recebidos na variável 'livros'
-        this.filteredLivros = data; // Inicializa os livros filtrados com todos os livros
+        this.livros = data; 
+        this.filteredLivros = data; 
       },
       (error) => {
         console.error('Erro ao carregar os livros', error);
@@ -32,7 +32,7 @@ export class ListingEbookComponent implements OnInit {
     );
   }
 
-  // Método para filtrar livros
+  
   onSearchChange(): void {
     if (this.searchQuery.trim()) {
       this.filteredLivros = this.livros.filter((livro) =>
@@ -40,7 +40,7 @@ export class ListingEbookComponent implements OnInit {
         livro.autor.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     } else {
-      this.filteredLivros = this.livros; // Se não houver consulta, exibe todos os livros
+      this.filteredLivros = this.livros; 
     }
   }
 

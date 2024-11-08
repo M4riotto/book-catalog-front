@@ -56,6 +56,6 @@ export class EditingEbookComponent implements OnInit {
   }
 
   cancelar(): void {
-    this.router.navigate(['/']); // Navega para a página inicial ao cancelar
+    this.router.navigate(['/']); 
   }
 }

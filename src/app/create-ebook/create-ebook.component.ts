@@ -33,7 +33,7 @@ export class CreateEbookComponent {
       this.ebookCreateService.createLivro(this.livroForm.value).subscribe(
         () => {
           console.log('Livro criado com sucesso');
-          this.router.navigate(['/']); // Redireciona para a página inicial após salvar
+          this.router.navigate(['/']); 
         },
         (error) => {
           console.error('Erro ao criar o livro', error);

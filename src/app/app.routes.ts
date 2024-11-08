@@ -3,7 +3,7 @@ import { ListingEbookComponent } from './listing-ebook/listing-ebook.component';
 import { DetailsEbookComponent } from './details-ebook/details-ebook.component';
 import { EditingEbookComponent } from './editing-ebook/editing-ebook.component';
 import { CreateEbookComponent } from './create-ebook/create-ebook.component';
-import { AuthGuard } from './auth/auth.guard';  // Importa o AuthGuard
+import { AuthGuard } from './auth/auth.guard'; 
 import { AuthComponent } from './auth/auth.component';
 
 export const routes: Routes = [

@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details-ebook',
-  standalone: true, // Componente standalone
-  imports: [CommonModule], // Adiciona CommonModule e RouterModule
+  standalone: true, 
+  imports: [CommonModule], 
   templateUrl: './details-ebook.component.html',
   styleUrls: ['./details-ebook.component.css'],
 })
@@ -15,12 +15,12 @@ export class DetailsEbookComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router, // Adiciona o Router para redirecionar
+    private router: Router, 
     private ebookDetailsService: EbookService
   ) {}
 
   ngOnInit(): void {
-    // Captura o parâmetro id da URL
+    
     const livroId = this.route.snapshot.paramMap.get('id');
     if (livroId) {
       this.ebookDetailsService.getLivroDetalhes(livroId).subscribe((livro) => {
@@ -34,7 +34,7 @@ export class DetailsEbookComponent implements OnInit {
       this.ebookDetailsService.deleteLivro(this.livro.id).subscribe(
         () => {
           console.log('Livro deletado com sucesso');
-          // Redireciona para a página de listagem ou outra página após a deleção
+          
           this.router.navigate(['/']);
         },
         (error) => {
