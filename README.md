@@ -59,10 +59,11 @@ Este projeto consiste em uma aplicação de catálogo de livros construída com 
 
 ### **Rotas**
 
-- **/livros**: Exibe todos os livros no catálogo.
+- **/**: Exibe todos os livros no catálogo.
+- **/auth**: Tela de autenticação.
 - **/livros/:id**: Exibe os detalhes de um livro específico.
-- **/livros/adicionar**: Página para adicionar um novo livro.
-- **/livros/editar/:id**: Página para editar um livro existente.
+- **/criar-livro**: Página para adicionar um novo livro.
+- **/editar/livros/:id**: Página para editar um livro existente.
 
 ### **Autenticação**
 
